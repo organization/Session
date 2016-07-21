@@ -1,2 +1,2 @@
 # Session
-Session manager for nukkit
+Manage sessions on nukkit
