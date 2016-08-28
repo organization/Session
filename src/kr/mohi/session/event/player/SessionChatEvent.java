@@ -1,13 +1,14 @@
 package kr.mohi.session.event.player;
 
 import cn.nukkit.command.CommandSender;
+import cn.nukkit.event.Cancellable;
 import kr.mohi.session.Session;
 
 /**
  * @author 110EIm
  * @since 2016-07-17
  */
-public class SessionChatEvent extends SessionPlayerEvent {
+public class SessionChatEvent extends SessionPlayerEvent implements Cancellable{
     private String messgae;
     private String format;
 

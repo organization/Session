@@ -16,7 +16,7 @@ import java.util.Set;
 
 /**
  * @author 110EIm
- * @since 2016-7-j15
+ * @since 2016-7-15
  */
 public abstract class Session {
     protected SessionOption option;
@@ -63,10 +63,8 @@ public abstract class Session {
             Session session = (Session) constructor.newInstance();
             SessionCreationEvent event = new SessionCreationEvent(session);
             Server.getInstance().getPluginManager().callEvent(event);
-            if (!event.isCancelled()) {
-                Session.getSessions().add(session);
-                return Session.getSessions().indexOf(session);
-            }
+            Session.getSessions().add(session);
+            return Session.getSessions().indexOf(session);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -1,6 +1,5 @@
 package kr.mohi.session.event.player;
 
-import cn.nukkit.Player;
 import cn.nukkit.command.CommandSender;
 import kr.mohi.session.Session;
 
@@ -16,11 +15,11 @@ public class SessionQuitEvent extends SessionPlayerEvent {
         this.message = quitMessage;
     }
 
-    public void setQuitMessage(String message) {
-        this.message = message;
-    }
-
     public String getQuitMessage() {
         return this.message;
+    }
+
+    public void setQuitMessage(String message) {
+        this.message = message;
     }
 }
